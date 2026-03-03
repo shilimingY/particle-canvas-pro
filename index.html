@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollup.js 打包示例</title>
+</head>
+<body>
+    <h1 class="a">Rollup.js 基本8打包示例</h1>
+    <p>打开浏览器控制台查看打包结果</p>
+
+    <!-- <script src="https://unpkg.com/particle-canvas-pro@latest/dist/bundle.js"></script> -->
+    
+    <!-- 引入打包后的文件 -->
+    <script type="module">
+
+    import ParticleCanvas from './dist/bundle.esm.js'
+       new ParticleCanvas({
+        // canvasContainer:'.a',
+        canvasBackgroundColor:'rgba(0, 0, 0,0.1)',
+        // isBackground:false,
+        // showTrailEffect: true,
+        trailIntensity: 3,
+        particleBlur:10,
+        trailValue:-10,
+        lineWidth:-15,
+        particleSize:5,
+        particleNumber:150,
+        linkDistance:-1150,
+        particleSpeed:-1150,
+        lineOpacity:-1150,
+        particleColor:['red','#fff','#ccc','#888','green','yellow']
+       }).start()
+    </script>
+
+    <!-- <script>
+       console.log(ParticleCanvasPro)
+       new ParticleCanvasPro({
+        canvasContainer:'.a',
+        isBackground:true,
+        particleColor:['red','#fff','#ccc','#888','green']
+       }).start()
+    </script> -->
+
+</body>
+</html>
