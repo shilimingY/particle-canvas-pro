@@ -113,3 +113,6 @@ particleSystem.start();
 - ES Module (dist/bundle.esm.js)
 - CommonJS (dist/bundle.cjs.js)
 - UMD (dist/bundle.js)
+
+> ❤️ 喜欢这个插件？  
+> 如果你觉得它靠谱又省心，**点个 [⭐ Star](https://github.com/shilimingY/particle-canvas-pro) 收藏** 就是最大的鼓励！  ☕️✨
