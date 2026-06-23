@@ -56,7 +56,7 @@ export interface ParticleCanvasConfig {
 export declare class ParticleCanvas {
   constructor(options?: ParticleCanvasOptions);
   start(): void;
-  pause(): void;
+  stop(): void;
   reset(): void;
   resize(): void;
   destroy(): void;

@@ -514,7 +514,7 @@ class ParticleCanvas {
                     // 计算两个粒子之间的距离
                     const dx = this.particles[i].x - this.particles[j].x;
                     const dy = this.particles[i].y - this.particles[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    const distance = Math.sqrt(dx * dx + dy * dy); // 欧氏距离
 
                     // 如果距离小于连接距离，绘制连线
                     if (distance < this.config.linkDistance) {
@@ -612,7 +612,7 @@ class ParticleCanvas {
     /**
      * 暂停粒子动画
      */
-    public pause(): void {
+    public stop(): void {
         this.isRunning = false;
         if (this.animationId) {
             cancelAnimationFrame(this.animationId);
@@ -628,7 +628,7 @@ class ParticleCanvas {
         // 仅在动画运行时重新开始
         const wasRunning = this.isRunning;
         if (wasRunning) {
-            this.pause();
+            this.stop();
         }
 
         // 重新创建粒子
@@ -706,7 +706,7 @@ class ParticleCanvas {
      * 停止动画并移除画布
      */
     public destroy(): void {
-        this.pause();
+        this.stop();
         if (this.canvas && this.canvas.parentNode) {
             this.canvas.parentNode.removeChild(this.canvas);
         }
@@ -737,7 +737,7 @@ class ParticleCanvas {
                 // 页面隐藏时记录运行状态并暂停动画以节省资源
                 this.wasRunningBeforeHide = this.isRunning;
                 if (this.isRunning) {
-                    this.pause();
+                    this.stop();
                 }
             } else {
                 // 页面恢复可见时，如果之前是运行状态，重新开始动画

@@ -1,6 +1,6 @@
 // rollup.config.js
 import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 
 export default {
   // 修改入口为 global.ts
